@@ -23,7 +23,7 @@ app.use(session({
   secret: process.env.SESSION_SECRET, // строка для шифрования сессии
   resave: false, // не пересохраняем сессию если не было изменений
   saveUninitialized: false, // не сохраняем сессию если она пустая
-  cookie: { secure: true }, // не HTTPS
+  cookie: { secure: false }, // не HTTPS
   name: 'Albert', // имя сессионной куки
   // store: new FileStore(), // хранилище для куков - папка с файлами
 }));
