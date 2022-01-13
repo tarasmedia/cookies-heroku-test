@@ -1,0 +1,15 @@
+<h1>{{title}}</h1>
+<p>Welcome to {{title}}</p>
+
+<button id="getBtn">get data</button>
+
+<script>
+  const getBtn = document.getElementById('getBtn');
+  getBtn.addEventListener('click', async () => {
+    console.log('123')
+    const ft = await fetch('http://localhost:3456');
+    const result = await ft.json();
+    console.log(result);
+    // fetch('http://localhost:3456').then((data) => data.json()).then((people) => console.log(people))
+  })
+</script>

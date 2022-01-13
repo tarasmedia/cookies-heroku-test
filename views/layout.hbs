@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        {{#if userName}}
+        <li><a href="/users/logout">logout</a></li>
+        <li><a href="/users/profile/{{userId}}">{{userName}} profile</a></li>
+        {{else}}
+        <li><a href="/users/signin">signin</a></li>
+        <li><a href="/users/signup">signup</a></li>
+        {{/if}}
+      </ul>
+    </nav>
+    {{{body}}}
+  </body>
+</html>
